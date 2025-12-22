@@ -64,7 +64,7 @@ $breakpoints: (
 }
 
 // インナー
-@mixin inner($mw: 1000px, $w: 90%) {
+@mixin inner($mw: 1200px, $w: 90%) {
     max-width: $mw;
     width: $w;
     margin-left: auto;
@@ -151,27 +151,33 @@ img {
 
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 3000;
-    padding: 10px 0;
+    padding: 16px 24px;
     background: $color-base;
 
     &__inner {
-        @include inner();
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     &__logo {
-        width: 80px;
+        width: 70px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__nav {
         position: fixed;
-        top: 0;
+        top: 80px;
         right: -100%;
         width: 20%;
         height: 100vh;
@@ -202,8 +208,8 @@ img {
         flex-direction: column;
         justify-content: center;
         gap: 6px;
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
         background: none;
         border: none;
         cursor: pointer;
@@ -211,8 +217,9 @@ img {
 
     &__hamburger-line {
         display: block;
-        width: 100%;
+        width: 25px;
         height: 2px;
+        margin: 0 auto;
         background-color: $color-accent;
     }
 
@@ -378,7 +385,8 @@ img {
 .mv {
     position: relative;
     width: 100%;
-    padding: 400px 0; // ←ここで高さを調整！（上下余白）
+    height: 100vh;
+    overflow: hidden;
 
     &__bg {
         position: absolute;
@@ -394,142 +402,115 @@ img {
         max-width: 1200px;
         margin: 0 auto;
         position: relative;
-        padding-left: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
     }
 
-    // &__title {
-    //     font-size: 60px;
-    //     color: rgba(0, 0, 0, 0.22);
-
-    //     .mv__subtitle {
-    //         display: block;
-    //         font-size: 40px;
-    //         color: rgba(0, 0, 0, 0.12);
-    //         margin-top: -10px;
-    //     }
-    // }
-}
-
-.mv {
-    position: relative;
-    padding: 400px 0;
-}
-
-/* 手元の全体 */
-.mv-hand {
-    position: absolute;
-    bottom: 0; // ← 下半分にくる
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 900px;
-    pointer-events: none;
-}
-
-/* 線画 */
-.mv-hand__base {
-    width: 100%;
-    display: block;
-}
-
-/* ネイル */
-.mv-hand__nail {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    opacity: 0;
-    animation: nailFade 1.2s ease forwards;
-}
-
-@keyframes nailFade {
-    to {
-        opacity: 1;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
-}
 
-.mv__title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 15vw; // 画面幅に応じて大きさを調整
-    font-family: 'Pacifico', cursive;
-    font-weight: 700; // 太めでぷるんと感
-    color: #f9f3f3;
-    text-shadow: 1.5px 1.5px 2.5px $color-accent; // ← 影を半分に
-    opacity: 1; // 不透明
-    pointer-events: none;
-    white-space: nowrap;
-    line-height: 1;
+    &__title {
+        font-size: 100px;
+        font-family: $font-family-gothic;
+        color: $color-base;
+        margin-left: 100px;
+    }
+
+    &__undertext {
+        margin-top: 45px;
+        margin-left: 110px;
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        color: rgba(120, 90, 90, 0.85);
+        white-space: nowrap;
+    }
+
+    &__caption {
+        margin-left: 40px;
+        margin-top: 12px;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        color: rgba(120, 90, 90, 0.8);
+    }
+
+    &__img {
+        height: auto;
+        transform: translateX(-200px);
+    }
 }
 
 .news {
     padding: 120px 20px;
     background: #fff; // 必要に応じて変更
-}
 
-.news__inner {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
+    &__inner {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-.news__head {
-    margin-bottom: 60px;
-}
+    &__head {
+        margin-bottom: 60px;
+    }
 
-.news__title {
-    font-size: 24px;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-    color: #6a605d;
-}
+    &__title {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+        color: #6a605d;
+    }
 
-.news__subtitle {
-    font-size: 13px;
-    color: #b79d9d;
-    margin-bottom: 20px;
-}
+    &__subtitle {
+        font-size: 13px;
+        color: #b79d9d;
+        margin-bottom: 20px;
+    }
 
-.news__line {
-    width: 100%;
-    height: 1px;
-    background-color: #d9c2c2;
-    max-width: 500px;
-    margin: 0 auto;
-}
+    &__line {
+        width: 100%;
+        height: 1px;
+        background-color: #d9c2c2;
+        max-width: 500px;
+        margin: 0 auto;
+    }
 
-.news__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.news__item {
-    display: grid;
-    grid-template-columns: 150px 200px 1fr;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 16px 0;
-    color: #6a605d;
-    font-size: 14px;
-}
+    &__item {
+        display: grid;
+        grid-template-columns: 150px 200px 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 16px 0;
+        color: #6a605d;
+        font-size: 14px;
+    }
 
-.news__item+.news__item {
-    border-top: 1px solid #f0e6e6;
-}
+    &__item+&__item {
+        border-top: 1px solid #f0e6e6;
+    }
 
-.news__date {
-    text-align: left;
-}
+    &__date {
+        text-align: left;
+    }
 
-.news__category {
-    text-align: left;
-}
+    &__category {
+        text-align: left;
+    }
 
-.news__text {
-    text-align: left;
+    &__text {
+        text-align: left;
+    }
 }
 
 .concept {
@@ -586,9 +567,27 @@ img {
         color: $color-text;
     }
 
-    // ★ conceptセクション内の.post_blockに上方向の余白を追加
-    .post_block {
-        margin-top: 100px; // ★ 文章ブロックを下に下げる
+    /* 1つ目の post の画像：右上・左下を角丸 */
+    .concept .post:nth-of-type(1) .post__img {
+        border-radius: 0 20px 0 20px;
+    }
+
+    /* 2つ目の post の画像：左上・右下を角丸 */
+    .concept .post:nth-of-type(2) .post__img {
+        border-radius: 20px 0 20px 0;
+    }
+
+    /* 2個目の post だけ左右を反転 */
+    .concept .post:nth-of-type(2) {
+        grid-template-columns: 400fr 600fr;
+    }
+
+    .concept .post:nth-of-type(2) .post__img {
+        order: 2;
+    }
+
+    .concept .post:nth-of-type(2) .post_block {
+        order: 1;
     }
 }
 
