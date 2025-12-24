@@ -57,7 +57,7 @@ $breakpoints: (
 
 // メディアクエリ (モバイルファースト)
 // @param {string} $breakpoint - $breakpointsのキー
-@mixin mq($breakpoint: desktop) {
+@mixin mq($breakpoint: sm) {
     @media (width >=map-get($breakpoints, $breakpoint)) {
         @content;
     }
@@ -245,6 +245,7 @@ img {
 
     &__inner {
         @include inner();
+        width: 70%;
         display: grid;
         grid-template-columns: 260px 1fr;
         // column-gap: 80px;
@@ -1214,5 +1215,39 @@ body.menu {
         grid-row: 2;
         justify-self: center;
         transform: translateX(170px);
+    }
+}
+
+/* ==============================================================
+   SP（600px以下）
+============================================================== */
+@include mq('sm') {
+
+    /* header / footer */
+    header,
+    footer {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* menu：1カラム縦並び */
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .menu_item.card {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+
+    /* gallery：2カラム */
+    .gallery__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 }
