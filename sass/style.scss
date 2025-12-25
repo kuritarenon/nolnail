@@ -400,48 +400,64 @@ img {
     }
 
     &__inner {
+        position: relative;
         max-width: 1200px;
         margin: 0 auto;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         height: 100vh;
-    }
-
-    &__text {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 0;
     }
 
     &__title {
-        font-size: 100px;
+        position: absolute;
+        width: 100%;
+        font-size: 160px;
         font-family: $font-family-gothic;
-        color: $color-base;
-        margin-left: 100px;
+        color: transparent; // 塗りを透明に
+        -webkit-text-stroke: 2px $color-accent; // 縁取り
+        text-stroke: 2px $color-accent;
+        line-height: 1;
+        letter-spacing: 0.25em;
+        pointer-events: none;
+        // color: rgba(242, 243, 243, 0.2); // ←中を薄く塗りたい時
+        z-index: 1;
     }
 
-    &__undertext {
-        margin-top: 45px;
-        margin-left: 110px;
-        font-size: 14px;
-        letter-spacing: 0.12em;
-        color: rgba(120, 90, 90, 0.85);
-        white-space: nowrap;
+    &__title--top {
+        top: 70px;
+        left: 0;
+        text-align: left;
+        padding-left: 10px;
     }
 
-    &__caption {
-        margin-left: 40px;
-        margin-top: 12px;
-        font-size: 14px;
-        letter-spacing: 0.08em;
-        color: rgba(120, 90, 90, 0.8);
+    &__title--bottom {
+        bottom: 40px;
+        right: 0;
+        text-align: right;
+        padding-right: 10px;
     }
 
-    &__img {
+    &__images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+        z-index: 1;
+        margin-top: 24px; // 全体を少し下へ
+    }
+
+    &__images img {
+        width: 50%;
+        max-width: 360px; // 少しだけ大きく
         height: auto;
-        transform: translateX(-200px);
+    }
+
+    .mv__title {
+        z-index: 2;
     }
 }
 
@@ -515,6 +531,7 @@ img {
 }
 
 .concept {
+    margin-top: 100px;
     padding: 100px 0;
     background: $color-main;
 
@@ -784,7 +801,7 @@ img {
 }
 
 .gallery {
-    margin-bottom: 100px;
+    margin: 100px 0;
 
     &__inner {
         @include inner(1000px, 90%);

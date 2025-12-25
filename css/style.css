@@ -227,43 +227,57 @@ img {
   z-index: -1;
 }
 .mv__inner {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100vh;
-}
-.mv__text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
 }
 .mv__title {
-  font-size: 100px;
+  position: absolute;
+  width: 100%;
+  font-size: 160px;
   font-family: "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  color: #F2DEDE;
-  margin-left: 100px;
+  color: transparent;
+  -webkit-text-stroke: 2px #CD9B9B;
+  text-stroke: 2px #CD9B9B;
+  line-height: 1;
+  letter-spacing: 0.25em;
+  pointer-events: none;
+  z-index: 1;
 }
-.mv__undertext {
-  margin-top: 45px;
-  margin-left: 110px;
-  font-size: 14px;
-  letter-spacing: 0.12em;
-  color: rgba(120, 90, 90, 0.85);
-  white-space: nowrap;
+.mv__title--top {
+  top: 70px;
+  left: 0;
+  text-align: left;
+  padding-left: 10px;
 }
-.mv__caption {
-  margin-left: 40px;
-  margin-top: 12px;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  color: rgba(120, 90, 90, 0.8);
+.mv__title--bottom {
+  bottom: 40px;
+  right: 0;
+  text-align: right;
+  padding-right: 10px;
 }
-.mv__img {
+.mv__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+}
+.mv__images img {
+  width: 50%;
+  max-width: 360px;
   height: auto;
-  transform: translateX(-200px);
+}
+.mv .mv__title {
+  z-index: 2;
 }
 
 .news {
@@ -325,6 +339,7 @@ img {
 }
 
 .concept {
+  margin-top: 100px;
   padding: 100px 0;
   background: #F9F3F3;
   /* 1つ目の post の画像：右上・左下を角丸 */
@@ -581,7 +596,7 @@ img {
 }
 
 .gallery {
-  margin-bottom: 100px;
+  margin: 100px 0;
 }
 .gallery__inner {
   max-width: 1000px;
