@@ -20,7 +20,6 @@ img {
   z-index: 3000;
   padding: 16px 24px;
   background: #F2DEDE;
-  /* ハンバーガーメニューの×ボタンを右上に固定＆大きく */
 }
 .header__inner {
   max-width: 1200px;
@@ -97,8 +96,6 @@ img {
   padding: 60px;
   background-color: #F2DEDE;
   color: #666360;
-  /* 左のロゴ＋SNS */
-  /* ナビゲーション全体 */
   /* 下線部分 */
   /* コピーライト */
 }
@@ -202,6 +199,99 @@ img {
   height: 1px;
   background-color: #d9c2c2;
 }
+@media (width >= ) {
+  .footer__copy {
+    /* ナビゲーション全体 */
+    /* 下線部分 */
+    /* コピーライト */
+  }
+  .footer__copy__inner {
+    grid-template-columns: 130px 1fr;
+  }
+  .footer__copy__logo img {
+    width: 30px;
+    margin-bottom: 10px;
+  }
+  .footer__copy__sns {
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .footer__copy__sns-item {
+    margin-bottom: 0;
+  }
+  .footer__copy__sns-item a {
+    display: inline-block;
+  }
+  .footer__copy__sns-item a img {
+    width: 20px;
+    height: auto;
+  }
+  .footer__copy__sns-item a:hover {
+    opacity: 0.6;
+  }
+  .footer__copy__nav {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    -moz-column-gap: 0;
+         column-gap: 0;
+    align-items: start;
+  }
+  .footer__copy__nav-block {
+    min-width: 60px;
+  }
+  .footer__copy__nav-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #6a605d;
+    margin-bottom: 20px;
+  }
+  .footer__copy__nav-title a {
+    text-decoration: none;
+    color: #6a605d;
+  }
+  .footer__copy__nav-title a:hover {
+    opacity: 0.6;
+  }
+  .footer__copy__nav-list {
+    list-style: none;
+    padding: 0;
+  }
+  .footer__copy__nav-list li {
+    margin-bottom: 10px;
+  }
+  .footer__copy__nav-list li a {
+    text-decoration: none;
+    color: #666360;
+    font-size: 15px;
+  }
+  .footer__copy__nav-list li a:hover {
+    opacity: 0.6;
+  }
+  .footer__copy__line {
+    max-width: 1000px;
+    height: 1px;
+    background-color: #d9c2c2;
+    margin: 40px auto 0;
+  }
+  .footer__copy__copy {
+    grid-column: 1/-1;
+    position: relative;
+    padding-top: 20px;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .footer__copy__copy::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #d9c2c2;
+  }
+}
 
 .card__name {
   margin-top: 20px;
@@ -244,7 +334,7 @@ img {
   font-family: "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: transparent;
   -webkit-text-stroke: 2px #CD9B9B;
-  text-stroke: 2px #CD9B9B;
+  -webkit-text-stroke: 2px #CD9B9B;
   line-height: 1;
   letter-spacing: 0.25em;
   pointer-events: none;
@@ -1098,28 +1188,11 @@ body.menu {
 ============================================================== */
 @media (width >= ) {
   /* header / footer */
-  header,
-footer {
+  header {
     padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  /* menu：1カラム縦並び */
-  .menu__list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  .menu__list .menu_item.card {
-    width: 100%;
-    max-width: 320px;
-  }
-  /* gallery：2カラム */
-  .gallery__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */

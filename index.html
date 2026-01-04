@@ -4,299 +4,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="岡崎市のネイルサロン Nol nail。定額ネイルやトレンドデザインを提供しています。">
+    <meta property="og:title" content="Nol nail｜ネイルサロン">
+    <meta property="og:description" content="岡崎市のネイルサロン Nol nail。定額ネイルとトレンドデザイン。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="https://example.com/ogp.jpg">
     <title>Top | Nol nail</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="ja">
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo"><a href="./index.html"><img src="./images/logo.webp" alt=""></a></h1>
+            <button class="header__hamburger" aria-expanded="false" aria-controls="global-nav">
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+            </button>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nol nail </title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
+            <nav class="header__nav" id="global-nav">
+                <button class="header__close" aria-label="close menu">×</button>
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="./index.html" class="header__nav-link">TOP</a></li>
+                    <li class="header__nav-item"><a href="./menu.html" class="header__nav-link">MENU&PRICE</a></li>
+                    <li class="header__nav-item"><a href="./reservation.html" class="header__nav-link">RESERVATION</a>
+                    </li>
+                    <li class="header__nav-item"><a href="./access.html" class="header__nav-link">ACCESS&INFO</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <body>
-        <header class="header">
-            <div class="header__inner">
-                <h1 class="header__logo"><a href="./index.html"><img src="./images/logo.webp" alt=""></a></h1>
-                <button class="header__hamburger" aria-expanded="false" aria-controls="global-nav">
-                    <span class="header__hamburger-line"></span>
-                    <span class="header__hamburger-line"></span>
-                    <span class="header__hamburger-line"></span>
-                </button>
+    <main class="main">
 
-                <nav class="header__nav" id="global-nav">
-                    <button class="header__close" aria-label="close menu">×</button>
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item"><a href="./index.html" class="header__nav-link">TOP</a></li>
-                        <li class="header__nav-item"><a href="./menu.html" class="header__nav-link">MENU&PRICE</a></li>
-                        <li class="header__nav-item"><a href="./reservation.html"
-                                class="header__nav-link">RESERVATION</a></li>
-                        <li class="header__nav-item"><a href="./access.html" class="header__nav-link">ACCESS&INFO</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <main class="main">
-
-            <section class="mv">
-                <div class="mv__bg"></div>
-                <div class="mv__inner">
-                    <p class="mv__title mv__title--top">Nolnail</p>
-                    <div class="mv__images">
-                        <img src="./images/mv1.webp" alt="">
-                        <img src="./images/mv2.webp" alt="">
-                    </div>
-                    <p class="mv__title mv__title--bottom">Nolnail</p>
+        <section class="mv">
+            <div class="mv__bg"></div>
+            <div class="mv__inner">
+                <p class="mv__title mv__title--top">Nolnail</p>
+                <div class="mv__images">
+                    <img src="./images/mv1.webp" alt="">
+                    <img src="./images/mv2.webp" alt="">
                 </div>
-            </section>
+                <p class="mv__title mv__title--bottom">Nolnail</p>
+            </div>
+        </section>
 
-            <section class="concept">
-                <div class="concept__inner">
-                    <div class="concept__head">
-                        <h2 class="concept__title">OUR STYLE</h2>
-                        <p class="concept__subtitle">サロンのこだわりと人気メニュー</p>
-                        <div class="concept__line"></div>
+        <section class="concept">
+            <div class="concept__inner">
+                <div class="concept__head">
+                    <h2 class="concept__title">OUR STYLE</h2>
+                    <p class="concept__subtitle">サロンのこだわりと人気メニュー</p>
+                    <div class="concept__line"></div>
+                </div>
+
+                <p class="concept__catch">
+                    “手元から、かわいいを纏う。”<br>ちゅるんとしたツヤと、指先のフォルム。<br>毎日が少し特別になるような、<br>あなたらしい「かわいい」をデザインします。
+                </p>
+
+                <article class="post">
+                    <img class="post__img" src="./images/comcept1.webp" alt="">
+                    <div class="post_block">
+                        <h4 class="post__title">浮かないモチの良さと、<br>美しいフォルム</h4>
+                        <div class="post__text">
+                            <p>丁寧な下処理と<br>自爪を削らない爪に優しいフィルイン技術で、<br>次の付け替えまで美しいツヤとフォルムをキープ。<br>強度のあるトップジェルで、<br>毎日をストレスなく過ごせる<br>“モチの良さ”を実現します。
+                            </p>
+                        </div>
                     </div>
+                </article>
 
-                    <p class="concept__catch">
-                        “手元から、かわいいを纏う。”<br>ちゅるんとしたツヤと、指先のフォルム。<br>毎日が少し特別になるような、<br>あなたらしい「かわいい」をデザインします。
+                <article class="concept__list post">
+                    <img class="post__img" src="./images/comcept2.webp" alt="">
+                    <div class="post_block">
+                        <h4 class="post__title">透明感を引き出す、<br>こだわりのカラー</h4>
+                        <div class="post__text">
+                            <p>当店では、ピンクやベージュ系のカラーを<br>豊富に取り揃えており、<br>
+                                お客様一人ひとりの肌になじむ色を<br>自由にお選びいただけます。<br>
+                                トレンド感のあるニュアンスカラーも人気です。
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="point">
+            <div class="point__inner">
+
+                <div class="point__eyecatch">
+                    <svg viewBox="0 0 300 120" width="300" height="120" aria-hidden="true">
+                        <path id="point-curve" d="M 20 100 Q 150 20 280 100" fill="transparent" />
+                        <text>
+                            <textPath href="#point-curve" startOffset="50%" text-anchor="middle">
+                                ３つのおすすめポイント
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <h3 class="point__title">Nol人気の定額ネイル</h3>
+
+                <ul class="point__list">
+                    <li class="point__item">
+                        <span class="point__number">01</span>
+                        <p class="point__text">料金が<br>わかりやすく安心</p>
+                    </li>
+
+                    <li class="point__item">
+                        <span class="point__number">02</span>
+                        <p class="point__text">毎月新しい<br>デザインを楽しめる</p>
+                    </li>
+
+                    <li class="point__item">
+                        <span class="point__number">03</span>
+                        <p class="point__text">カラーの変更が<br>できる</p>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="menu">
+            <div class="menu__inner">
+
+                <div class="menu__text">
+                    <p>定額ネイルは5種類のコースからお選びください<br>コースごとにデザインの雰囲気や<br>アートの内容が異なります。<br>シンプルから華やかまで、<br>ライフスタイルに合わせてお楽しみください。
                     </p>
-
-                    <article class="post">
-                        <img class="post__img" src="./images/comcept1.webp" alt="">
-                        <div class="post_block">
-                            <h4 class="post__title">浮かないモチの良さと、<br>美しいフォルム</h4>
-                            <div class="post__text">
-                                <p>丁寧な下処理と<br>自爪を削らない爪に優しいフィルイン技術で、<br>次の付け替えまで美しいツヤとフォルムをキープ。<br>強度のあるトップジェルで、<br>毎日をストレスなく過ごせる<br>“モチの良さ”を実現します。
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="concept__list post">
-                        <img class="post__img" src="./images/comcept2.webp" alt="">
-                        <div class="post_block">
-                            <h4 class="post__title">透明感を引き出す、<br>こだわりのカラー</h4>
-                            <div class="post__text">
-                                <p>当店では、ピンクやベージュ系のカラーを<br>豊富に取り揃えており、<br>
-                                    お客様一人ひとりの肌になじむ色を<br>自由にお選びいただけます。<br>
-                                    トレンド感のあるニュアンスカラーも人気です。
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="point">
-                <div class="point__inner">
-
-                    <div class="point__eyecatch">
-                        <svg viewBox="0 0 300 120" width="300" height="120" aria-hidden="true">
-                            <path id="point-curve" d="M 20 100 Q 150 20 280 100" fill="transparent" />
-                            <text>
-                                <textPath href="#point-curve" startOffset="50%" text-anchor="middle">
-                                    ３つのおすすめポイント
-                                </textPath>
-                            </text>
-                        </svg>
-                    </div>
-                    <h3 class="point__title">Nol人気の定額ネイル</h3>
-
-                    <ul class="point__list">
-                        <li class="point__item">
-                            <span class="point__number">01</span>
-                            <p class="point__text">料金が<br>わかりやすく安心</p>
-                        </li>
-
-                        <li class="point__item">
-                            <span class="point__number">02</span>
-                            <p class="point__text">毎月新しい<br>デザインを楽しめる</p>
-                        </li>
-
-                        <li class="point__item">
-                            <span class="point__number">03</span>
-                            <p class="point__text">カラーの変更が<br>できる</p>
-                        </li>
-                    </ul>
-
-                </div>
-            </section>
-
-            <section class="menu">
-                <div class="menu__inner">
-
-                    <div class="menu__text">
-                        <p>定額ネイルは5種類のコースからお選びください<br>コースごとにデザインの雰囲気や<br>アートの内容が異なります。<br>シンプルから華やかまで、<br>ライフスタイルに合わせてお楽しみください。
-                        </p>
-                    </div>
-
-                    <div class="menu__list">
-                        <div class="menu_item card">
-                            <img src="./images/menu1.webp" alt="" class="card__img">
-                            <p class="card__name">定額 Nol Collection A</p>
-                            <p class="card__text">指先を上品に。<br>毎日になじむシンプルデザイン。</p>
-                        </div>
-
-                        <div class="menu_item card">
-                            <img src="./images/menu2.webp" alt="" class="card__img">
-                            <p class="card__name">定額 Nol Collection B</p>
-                            <p class="card__text">トレンド感をプラス。<br>今っぽさを楽しみたい方に。</p>
-                        </div>
-
-                        <div class="menu_item card">
-                            <img src="./images/menu3.webp" alt="" class="card__img">
-                            <p class="card__name">定額 Nol Collection C</p>
-                            <p class="card__text">華やかに魅せるフルアートコース。<br>特別な日にも。</p>
-                        </div>
-
-                        <div class="menu_item card">
-                            <img src="./images/menu4.webp" alt="" class="card__img">
-                            <p class="card__name">定額 Nol Collection N</p>
-                            <p class="card__text">抜け感と個性を大切に。<br>ニュアンスデザインが好きな方へ。</p>
-                        </div>
-
-                        <div class="menu_item card">
-                            <img src="./images/menu5.webp" alt="" class="card__img">
-                            <p class="card__name">定額 Nol Collection K</p>
-                            <p class="card__text">繊細で可憐なアートが人気。<br>Kyoka担当限定デザイン。</p>
-                        </div>
-                    </div>
-                    <div class="menu-section__decotext"></div>
-                </div>
-            </section>
-            <section class="news">
-                <div class="news__inner">
-
-                    <div class="news__head">
-                        <h2 class="news__title">News</h2>
-                        <p class="news__subtitle">お知らせ</p>
-                        <div class="news__line"></div>
-                    </div>
-
-                    <ul class="news__list">
-
-                        <li class="news__item">
-                            <span class="news__date">2025.10.19</span>
-                            <span class="news__category">おすすめのメニュー</span>
-                            <span class="news__text">Nol Collection N</span>
-                        </li>
-
-                        <li class="news__item">
-                            <span class="news__date">2025.10.16</span>
-                            <span class="news__category">おすすめのメニュー</span>
-                            <span class="news__text">magnet&gradation</span>
-                        </li>
-
-                        <li class="news__item">
-                            <span class="news__date">2025.9.8</span>
-                            <span class="news__category">サロンのNEWS</span>
-                            <span class="news__text">cancel policy</span>
-                        </li>
-
-                        <li class="news__item">
-                            <span class="news__date">2025.2.7</span>
-                            <span class="news__category">サロンのNEWS</span>
-                            <span class="news__text">当店のカラーチャートです</span>
-                        </li>
-
-                        <li class="news__item">
-                            <span class="news__date">2025.1.18</span>
-                            <span class="news__category">サロンのNEWS</span>
-                            <span class="news__text">駐車場のご案内</span>
-                        </li>
-
-                    </ul>
-
-                </div>
-            </section>
-
-            <section class="gallery">
-                <div class="gallery__inner">
-
-                    <div class="gallery__head">
-                        <h2 class="gallery__title">Gallery</h2>
-                        <p class="gallery__subtitle">Instagram最新デザイン</p>
-                        <div class="gallery__line"></div>
-                    </div>
-
-                    <div class="gallery__grid">
-                        <img src="./images/gallery1.webp" class="gallery__img" alt="">
-                        <img src="./images/gallery2.webp" class="gallery__img" alt="">
-                        <img src="./images/gallery3.webp" class="gallery__img" alt="">
-                        <img src="./images/gallery4.webp" class="gallery__img" alt="">
-                        <img src="./images/gallery5.webp" class="gallery__img" alt="">
-                        <img src="./images/gallery6.webp" class="gallery__img" alt="">
-                    </div>
-                    <a href="#" class="gallery__btn">他のデザインもチェックする</a>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer__inner">
-
-                <div class="footer__brand">
-                    <div class="footer__logo">
-                        <img src="./images/logo.webp" alt="Nol ロゴ" />
-                    </div>
-
-                    <ul class="footer__sns">
-                        <li class="footer__sns-item"><a href="https://line.me/R/ti/p/@249hssxb"><img
-                                    src="./images/LINE.webp" alt="公式LINEへのリンク"></a>
-                        </li>
-                        <li class="footer__sns-item"><a href="https://www.instagram.com/nol.nailsalon/"><img
-                                    src="./images/Instagram.webp" alt="公式Instagramへのリンク"></a></li>
-                    </ul>
                 </div>
 
-                <nav class="footer__nav">
-                    <div class="footer__nav-block">
-                        <p class="footer__nav-title"><a href="./index.html">Top</a></p>
-                    </div>
-                    <div class="footer__nav-block">
-                        <p class="footer__nav-title"><a href="./menu.html">MENU&PRICE</a></p>
-                        <ul class="footer__nav-list">
-                            <li><a href="#">ジェル</a></li>
-                            <li><a href="#">フット</a></li>
-                            <li><a href="#">その他メニュー</a></li>
-                            <li><a href="#">付替オフ</a></li>
-                            <li><a href="#">オフのみ</a></li>
-                            <li><a href="#">スカルプ</a></li>
-                        </ul>
+                <div class="menu__list">
+                    <div class="menu_item card">
+                        <img src="./images/menu1.webp" alt="" class="card__img">
+                        <p class="card__name">定額 Nol Collection A</p>
+                        <p class="card__text">指先を上品に。<br>毎日になじむシンプルデザイン。</p>
                     </div>
 
-                    <div class="footer__nav-block">
-                        <p class="footer__nav-title"><a href="./reservation.html">RESERVATION</a></p>
-                        <ul class="footer__nav-list">
-                            <li><a href="#">ご予約について</a></li>
-                            <li><a href="#">キャンセルポリシー</a></li>
-                        </ul>
+                    <div class="menu_item card">
+                        <img src="./images/menu2.webp" alt="" class="card__img">
+                        <p class="card__name">定額 Nol Collection B</p>
+                        <p class="card__text">トレンド感をプラス。<br>今っぽさを楽しみたい方に。</p>
                     </div>
 
-                    <div class="footer__nav-block">
-                        <p class="footer__nav-title"><a href="./access.html">ACCESS&INFO</a></p>
-                        <ul class="footer__nav-list">
-                            <li><a href="#">アクセス</a></li>
-                            <li><a href="#">店舗情報</a></li>
-                        </ul>
+                    <div class="menu_item card">
+                        <img src="./images/menu3.webp" alt="" class="card__img">
+                        <p class="card__name">定額 Nol Collection C</p>
+                        <p class="card__text">華やかに魅せるフルアートコース。<br>特別な日にも。</p>
                     </div>
 
-                </nav>
-                <small class="footer__copy">©2025 nol nail salon</small>
+                    <div class="menu_item card">
+                        <img src="./images/menu4.webp" alt="" class="card__img">
+                        <p class="card__name">定額 Nol Collection N</p>
+                        <p class="card__text">抜け感と個性を大切に。<br>ニュアンスデザインが好きな方へ。</p>
+                    </div>
+
+                    <div class="menu_item card">
+                        <img src="./images/menu5.webp" alt="" class="card__img">
+                        <p class="card__name">定額 Nol Collection K</p>
+                        <p class="card__text">繊細で可憐なアートが人気。<br>Kyoka担当限定デザイン。</p>
+                    </div>
+                </div>
+                <div class="menu-section__decotext"></div>
             </div>
-        </footer>
-        <script src="./js/main.js"></script>
-    </body>
+        </section>
+        <section class="news">
+            <div class="news__inner">
 
-    </html>
+                <div class="news__head">
+                    <h2 class="news__title">News</h2>
+                    <p class="news__subtitle">お知らせ</p>
+                    <div class="news__line"></div>
+                </div>
+
+                <ul class="news__list">
+
+                    <li class="news__item">
+                        <span class="news__date">2025.10.19</span>
+                        <span class="news__category">おすすめのメニュー</span>
+                        <span class="news__text">Nol Collection N</span>
+                    </li>
+
+                    <li class="news__item">
+                        <span class="news__date">2025.10.16</span>
+                        <span class="news__category">おすすめのメニュー</span>
+                        <span class="news__text">magnet&gradation</span>
+                    </li>
+
+                    <li class="news__item">
+                        <span class="news__date">2025.9.8</span>
+                        <span class="news__category">サロンのNEWS</span>
+                        <span class="news__text">cancel policy</span>
+                    </li>
+
+                    <li class="news__item">
+                        <span class="news__date">2025.2.7</span>
+                        <span class="news__category">サロンのNEWS</span>
+                        <span class="news__text">当店のカラーチャートです</span>
+                    </li>
+
+                    <li class="news__item">
+                        <span class="news__date">2025.1.18</span>
+                        <span class="news__category">サロンのNEWS</span>
+                        <span class="news__text">駐車場のご案内</span>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery__inner">
+
+                <div class="gallery__head">
+                    <h2 class="gallery__title">Gallery</h2>
+                    <p class="gallery__subtitle">Instagram最新デザイン</p>
+                    <div class="gallery__line"></div>
+                </div>
+
+                <div class="gallery__grid">
+                    <img src="./images/gallery1.webp" class="gallery__img" alt="">
+                    <img src="./images/gallery2.webp" class="gallery__img" alt="">
+                    <img src="./images/gallery3.webp" class="gallery__img" alt="">
+                    <img src="./images/gallery4.webp" class="gallery__img" alt="">
+                    <img src="./images/gallery5.webp" class="gallery__img" alt="">
+                    <img src="./images/gallery6.webp" class="gallery__img" alt="">
+                </div>
+                <a href="https://www.instagram.com/nol.nailsalon/" class="gallery__btn">他のデザインもチェックする</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="./images/logo.webp" alt="Nol ロゴ" />
+                </div>
+
+                <ul class="footer__sns">
+                    <li class="footer__sns-item"><a href="https://line.me/R/ti/p/@249hssxb"><img
+                                src="./images/LINE.webp" alt="公式LINEへのリンク"></a>
+                    </li>
+                    <li class="footer__sns-item"><a href="https://www.instagram.com/nol.nailsalon/"><img
+                                src="./images/Instagram.webp" alt="公式Instagramへのリンク"></a></li>
+                </ul>
+            </div>
+
+            <nav class="footer__nav">
+                <div class="footer__nav-block">
+                    <p class="footer__nav-title"><a href="./index.html">Top</a></p>
+                </div>
+                <div class="footer__nav-block">
+                    <p class="footer__nav-title"><a href="./menu.html">MENU&PRICE</a></p>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">ジェル</a></li>
+                        <li><a href="#">フット</a></li>
+                        <li><a href="#">その他メニュー</a></li>
+                        <li><a href="#">付替オフ</a></li>
+                        <li><a href="#">オフのみ</a></li>
+                        <li><a href="#">スカルプ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav-block">
+                    <p class="footer__nav-title"><a href="./reservation.html">RESERVATION</a></p>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">ご予約について</a></li>
+                        <li><a href="#">キャンセルポリシー</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav-block">
+                    <p class="footer__nav-title"><a href="./access.html">ACCESS&INFO</a></p>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">アクセス</a></li>
+                        <li><a href="#">店舗情報</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+            <small class="footer__copy">©2025 nail salon nol</small>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

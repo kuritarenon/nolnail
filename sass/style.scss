@@ -50,20 +50,17 @@ $breakpoints: (
     @return #{math.div($xd-value, 1000)}em;
 }
 
-
 // =================================================================
 //  Mixins
 // =================================================================
 
-// メディアクエリ (モバイルファースト)
-// @param {string} $breakpoint - $breakpointsのキー
+// メディアクエリ (デスクトップファースト)
 @mixin mq($breakpoint: sm) {
     @media (width >=map-get($breakpoints, $breakpoint)) {
         @content;
     }
 }
 
-// インナー
 @mixin inner($mw: 1200px, $w: 90%) {
     max-width: $mw;
     width: $w;
@@ -76,12 +73,12 @@ $breakpoints: (
     content: "Nol nail";
     display: block;
     font-family: 'Pacifico', serif;
-    font-size: rem(70); // 固定サイズ
-    opacity: 0.5; // 固定の薄さ
-    text-align: $align; // ★ここだけ変更可能
-    margin: rem(80) 0; // 固定マージン
-    color: $color-accent; // 固定カラー
-    letter-spacing: ls(40); // 固定文字間
+    font-size: rem(70);
+    opacity: 0.5;
+    text-align: $align;
+    margin: rem(80) 0;
+    color: $color-accent;
+    letter-spacing: ls(40);
     user-select: none;
 }
 
@@ -223,7 +220,6 @@ img {
         background-color: $color-accent;
     }
 
-    /* ハンバーガーメニューの×ボタンを右上に固定＆大きく */
     .header__close {
         position: absolute;
         top: 16px;
@@ -248,14 +244,10 @@ img {
         width: 70%;
         display: grid;
         grid-template-columns: 260px 1fr;
-        // column-gap: 80px;
-        // row-gap: 40px;
         margin: 0 auto;
     }
 
-    /* 左のロゴ＋SNS */
     &__brand {
-        // width: 260px; // 揃えるために固定幅
         text-align: left;
     }
 
@@ -291,11 +283,10 @@ img {
         }
     }
 
-    /* ナビゲーション全体 */
     &__nav {
         display: grid;
         grid-template-columns: repeat(4, auto);
-        column-gap: 0; // さらに間隔を縮める
+        column-gap: 0;
         align-items: start; // ★ 高さを中身分だけにする
     }
 
@@ -364,6 +355,116 @@ img {
             height: 1px;
             background-color: #d9c2c2;
         }
+
+        @include mq('sm') {
+            &__inner {
+                grid-template-columns: 130px 1fr;
+            }
+
+            &__logo img {
+                width: 30px;
+                margin-bottom: 10px;
+            }
+
+            &__sns {
+                gap: 8px;
+                align-items: center;
+                justify-content: flex-start;
+
+                &-item {
+                    margin-bottom: 0;
+
+                    a {
+                        display: inline-block;
+
+                        img {
+                            width: 20px;
+                            height: auto;
+                        }
+
+                        &:hover {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+
+            /* ナビゲーション全体 */
+            &__nav {
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                column-gap: 0; // さらに間隔を縮める
+                align-items: start; // ★ 高さを中身分だけにする
+            }
+
+            &__nav-block {
+                min-width: 60px; // 幅を縮めてブロック同士の距離をさらに詰める
+            }
+
+            &__nav-title {
+                font-weight: bold;
+                font-size: 16px;
+                color: #6a605d;
+                margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #6a605d;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            &__nav-list {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: $color-text;
+                        font-size: 15px;
+
+                        &:hover {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+
+            /* 下線部分 */
+            &__line {
+                max-width: 1000px;
+                height: 1px;
+                background-color: #d9c2c2;
+                margin: 40px auto 0;
+            }
+
+            /* コピーライト */
+            &__copy {
+                grid-column: 1 / -1;
+                position: relative;
+                padding-top: 20px;
+                text-align: right;
+                margin-top: 20px;
+                font-size: 12px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #d9c2c2;
+                }
+
+            }
+        }
     }
 }
 
@@ -418,7 +519,7 @@ img {
         font-family: $font-family-gothic;
         color: transparent; // 塗りを透明に
         -webkit-text-stroke: 2px $color-accent; // 縁取り
-        text-stroke: 2px $color-accent;
+        -webkit-text-stroke: 2px $color-accent;
         line-height: 1;
         letter-spacing: 0.25em;
         pointer-events: none;
@@ -1241,30 +1342,10 @@ body.menu {
 @include mq('sm') {
 
     /* header / footer */
-    header,
-    footer {
+    header {
         padding: 16px;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    /* menu：1カラム縦並び */
-    .menu__list {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        .menu_item.card {
-            width: 100%;
-            max-width: 320px;
-        }
-    }
-
-    /* gallery：2カラム */
-    .gallery__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
     }
 }
