@@ -193,23 +193,24 @@ body.menu {
 }
 
 .post {
-    margin-bottom: 80px;
     display: grid;
-    grid-template-columns: 600fr 400fr;
-    column-gap: 30px;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
 
     &__title {
+        margin-bottom: 20px;
         font-size: 16px;
         font-weight: bold;
     }
 
     &__text {
-        margin-top: 30px;
+        margin-bottom: 50px;
+        line-height: 2.5;
         font-size: 14px;
     }
 
     &_block {
-        margin-top: 200px;
+        margin-top: 40px;
     }
 
     &:nth-of-type(1) .post__img {
@@ -220,16 +221,45 @@ body.menu {
         border-radius: 20px 0 20px 0;
     }
 
-    &:nth-of-type(2) {
-        grid-template-columns: 400fr 600fr;
-    }
+    @include mq(desktop) {
+        margin-bottom: 80px;
+        display: grid;
+        grid-template-columns: 600fr 400fr;
+        column-gap: 30px;
 
-    &:nth-of-type(2) .post__img {
-        order: 2;
-    }
+        &__title {
+            font-size: 16px;
+            font-weight: bold;
+        }
 
-    &:nth-of-type(2) .post_block {
-        order: 1;
+        &__text {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        &_block {
+            margin-top: 200px;
+        }
+
+        &:nth-of-type(1) .post__img {
+            border-radius: 0 20px 0 20px;
+        }
+
+        &:nth-of-type(2) .post__img {
+            border-radius: 20px 0 20px 0;
+        }
+
+        &:nth-of-type(2) {
+            grid-template-columns: 400fr 600fr;
+        }
+
+        &:nth-of-type(2) .post__img {
+            order: 2;
+        }
+
+        &:nth-of-type(2) .post_block {
+            order: 1;
+        }
     }
 }
 
@@ -331,15 +361,15 @@ body.menu {
 }
 
 .footer {
-    padding: 60px;
+    padding: 30px;
     color: $color-text;
     background-color: $color-base;
 
     &__inner {
         @include inner();
-        width: 70%;
+        width: 90%;
         display: grid;
-        grid-template-columns: 260px auto;
+        grid-template-columns: 3fr 1fr;
         margin: 0 auto;
     }
 
@@ -375,8 +405,8 @@ body.menu {
 
     &__nav {
         display: grid;
-        grid-template-columns: repeat(4, auto);
-        align-items: start;
+        grid-template-columns: repeat(1, auto);
+        align-items: flex-end;
     }
 
     &__nav-block {
@@ -400,22 +430,7 @@ body.menu {
     }
 
     &__nav-list {
-        list-style: none;
-        padding: 0;
-
-        li {
-            margin-bottom: 10px;
-
-            a {
-                font-size: 15px;
-                color: $color-text;
-                text-decoration: none;
-
-                &:hover {
-                    opacity: 0.6;
-                }
-            }
-        }
+        display: none;
     }
 
     &__line {
@@ -512,6 +527,7 @@ body.menu {
         }
 
         &__nav-list {
+            display: block;
             list-style: none;
             padding: 0;
 
@@ -593,13 +609,12 @@ body.menu {
         width: 100%;
         font-size: 160px;
         font-family: $font-family-gothic;
-        color: transparent; // 塗りを透明に
-        -webkit-text-stroke: 2px $color-accent; // 縁取り
+        color: transparent;
+        -webkit-text-stroke: 2px $color-accent;
         -webkit-text-stroke: 2px $color-accent;
         line-height: 1;
         letter-spacing: 0.25em;
         pointer-events: none;
-        // color: rgba(242, 243, 243, 0.2); // ←中を薄く塗りたい時
         z-index: 1;
     }
 
@@ -624,12 +639,12 @@ body.menu {
         gap: 40px;
         position: relative;
         z-index: 1;
-        margin-top: 24px; // 全体を少し下へ
+        margin-top: 24px;
     }
 
     &__images img {
         width: 50%;
-        max-width: 360px; // 少しだけ大きく
+        max-width: 360px;
         height: auto;
     }
 
@@ -669,12 +684,6 @@ body.menu {
         display: flex;
         flex-direction: column;
         gap: 40px;
-
-        @include mq(desktop) {
-            flex-direction: row;
-            justify-content: center;
-            gap: 60px;
-        }
     }
 
     &__image-wrap {
@@ -723,20 +732,20 @@ body.menu {
     &__title {
         font-size: 24px;
         color: #6a605d;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
 
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 60px;
+        gap: 10px;
         justify-items: center;
     }
 
     &__item {
         position: relative;
-        width: 260px;
-        height: 260px;
+        width: 150px;
+        height: 150px;
         background-color: rgba(255, 255, 255, 0.6);
         border-radius: 50%;
         display: flex;
@@ -747,17 +756,82 @@ body.menu {
 
     &__number {
         position: absolute;
-        top: 24px;
-        left: 32px;
-        font-size: 32px;
-        // font-weight: bold;
+        top: 20px;
+        left: 5px;
+        font-size: rem(24);
         color: #c8a6a6;
     }
 
     &__text {
-        font-size: 18px;
+        font-size: rem(15);
         line-height: 1.8;
         color: #6a605d;
+    }
+
+    @include mq(desktop) {
+        margin-bottom: 100px;
+        padding: 50px 0;
+        background-color: #f2e3e3;
+        text-align: center;
+
+        &__inner {
+            @include inner(1000px, 90%);
+        }
+
+        &__eyecatch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+
+            svg {
+                overflow: visible;
+            }
+
+            text {
+                letter-spacing: 0.3em;
+                fill: #6a605d;
+                font-family: $font-family-gothic;
+            }
+        }
+
+        &__title {
+            font-size: 24px;
+            color: #6a605d;
+            margin-bottom: 80px;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            justify-items: center;
+        }
+
+        &__item {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        &__number {
+            position: absolute;
+            top: 24px;
+            left: 32px;
+            font-size: 32px;
+            color: #c8a6a6;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #6a605d;
+        }
     }
 }
 
@@ -784,7 +858,7 @@ body.menu {
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         gap: 40px;
         justify-items: center;
     }
@@ -821,38 +895,21 @@ body.menu {
         }
     }
 
-
-    /* PC時：3列 */
-    .menu__list {
-        @include mq(desktop) {
-            justify-items: center;
-        }
-    }
-
-    /* N：2段目・右に200px */
-    .menu__list .menu_item:nth-child(4) {
-        @include mq(desktop) {
-            grid-column: 1;
-            grid-row: 2;
-            justify-self: end;
-            transform: translateX(170px);
-        }
-    }
-
-    /* K：2段目・右に200px */
-    .menu__list .menu_item:nth-child(5) {
-        @include mq(desktop) {
-            grid-column: 2;
-            grid-row: 2;
-            justify-self: center;
-            transform: translateX(170px);
+    @include mq(desktop) {
+        .menu {
+            &__list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+                justify-items: center;
+            }
         }
     }
 }
 
 .news {
     padding: 120px 20px;
-    background: #fff; // 必要に応じて変更
+    background: #fff;
 
     &__inner {
         max-width: 900px;
@@ -907,10 +964,6 @@ body.menu {
     }
 
     &__date {
-        text-align: left;
-    }
-
-    &__category {
         text-align: left;
     }
 
@@ -1055,7 +1108,6 @@ body.menu {
         pointer-events: none;
         transition: opacity .6s ease, transform .6s ease;
         transform: translateY(5px);
-        /* 少しだけ下から出てくるようにするとさらに自然 */
     }
 
     &-sidebar.is-active {
@@ -1070,20 +1122,6 @@ body.menu {
         bottom: 40px;
         top: auto;
         transform: none;
-    }
-
-    /* N：2段目・中央 */
-    &__list .menu_item:nth-child(4) {
-        grid-column: 2;
-        grid-row: 2;
-        justify-self: end;
-    }
-
-    /* K：2段目・中央 */
-    &__list .menu_item:nth-child(5) {
-        grid-column: 3;
-        grid-row: 2;
-        justify-self: start;
     }
 }
 
