@@ -1047,13 +1047,10 @@ body.menu {
   width: -moz-fit-content;
   width: fit-content;
   display: grid;
-  grid-template-columns: auto auto;
-  -moz-column-gap: 60px;
-       column-gap: 60px;
-  align-items: end;
+  grid-template-columns: 1fr;
 }
 .access-section__map iframe {
-  width: 600px;
+  width: 400px;
   border-radius: 6px;
 }
 .access-page {
@@ -1129,18 +1126,18 @@ body.menu {
   font-size: 0.875rem;
 }
 .access-store__images {
-  display: flex;
-  gap: 1.25rem;
-  margin-bottom: 6.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-bottom: 60px;
 }
 .access-store__images img {
   width: 100%;
 }
 .access-store__info {
   margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  font-size: 0.9375rem;
 }
 .access-store__info .access-store__row {
   display: flex;
@@ -1153,5 +1150,121 @@ body.menu {
 .access-store__info .access-store__row dd {
   flex: 1;
   line-height: 1.7;
+}
+@media (width >= 600px) {
+  .access-row {
+    justify-content: center;
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+    align-items: end;
+  }
+  .access-section__map iframe {
+    width: 600px;
+    border-radius: 6px;
+  }
+  .access-page {
+    padding: 100px 0;
+    text-align: left;
+  }
+  .access-page__inner {
+    max-width: 1000px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .access-page__logo {
+    text-align: right;
+    margin-top: 5rem;
+  }
+  .access-page__logo img {
+    width: 200px;
+    opacity: 0.24;
+  }
+  .access-page__title {
+    color: #666360;
+    margin-top: 50px;
+    font-size: 1.5rem;
+  }
+  .access-section {
+    margin-bottom: 5rem;
+  }
+  .access-section__title {
+    font-size: 1.125rem;
+    margin: 2rem 0;
+    position: relative;
+  }
+  .access-section__title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d8c4c4;
+    margin-top: 1.5625rem;
+  }
+  .access-section__decotext::before {
+    content: "Nol nail";
+    display: block;
+    font-family: "Pacifico", serif;
+    font-size: 4.375rem;
+    opacity: 0.5;
+    text-align: right;
+    margin: 5rem 0;
+    color: #CD9B9B;
+    letter-spacing: 0.04em;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .access-section__guide .access-guide__block {
+    margin-top: 2.8125rem;
+  }
+  .access-section__guide .access-guide__heading {
+    margin-bottom: 0.375rem;
+    position: relative;
+  }
+  .access-section__guide .access-guide__heading::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 1px;
+    background-color: #CD9B9B;
+    margin-top: 0.375rem;
+  }
+  .access-section__guide-guide__text {
+    line-height: 1.7;
+    font-size: 0.875rem;
+  }
+  .access-store__images {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 6.25rem;
+  }
+  .access-store__images img {
+    width: 100%;
+  }
+  .access-store__info {
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .access-store__info .access-store__row {
+    display: flex;
+    gap: 6.25rem;
+    margin-bottom: 0.875rem;
+  }
+  .access-store__info .access-store__row dt {
+    width: 100px;
+  }
+  .access-store__info .access-store__row dd {
+    flex: 1;
+    line-height: 1.7;
+  }
 }
 /*# sourceMappingURL=style.css.map */
