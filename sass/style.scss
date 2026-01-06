@@ -1057,6 +1057,77 @@ body.menu {
     }
 }
 
+.news-detail {
+    padding: 50px 20px;
+
+    &__inner {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    &__date {
+        display: block;
+        font-size: 13px;
+        color: #b79d9d;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    &__title {
+        font-size: 22px;
+        color: #6a605d;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        text-align: left;
+    }
+
+    &__body {
+        font-size: 14px;
+        color: #6a605d;
+        line-height: 1.9;
+        text-align: left;
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 24px 0;
+        }
+    }
+
+    &__back {
+        @include btn();
+        background: transparent;
+        border: 1px solid #d9c2c2;
+        color: #b79d9d;
+        text-align: center;
+
+        &:hover {
+            background: #f7eeee;
+        }
+    }
+
+    @include mq(desktop) {
+        &__title {
+            font-size: 26px;
+        }
+    }
+}
+
+.page-news {
+    .news {
+        background: transparent;
+        padding-top: 60px;
+    }
+}
+
 .gallery {
     margin: 100px 0;
 
@@ -1427,71 +1498,6 @@ body.menu {
 
     &--hp {
         background-color: #c88f8f;
-    }
-
-    @include mq(desktop) {
-        line-height: 3;
-        margin-bottom: rem(80);
-
-        &__title {
-            @include heading-line();
-        }
-
-        &__point {
-            text-align: center;
-        }
-
-        &__text {
-            margin-bottom: rem(20);
-        }
-
-        &__lead {
-            line-height: 1.9;
-            margin-bottom: rem(24);
-            color: $color-accent;
-            font-weight: bold;
-        }
-
-        &__list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: rem(20);
-        }
-
-        &__item {
-            margin-bottom: rem(12);
-        }
-
-        &__note {
-            margin-top: rem(20);
-            line-height: 1.8;
-            color: $color-accent;
-            font-weight: bold;
-        }
-
-        &__btns {
-            margin-top: rem(40);
-            display: flex;
-            gap: rem(20);
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        &__decotext::before {
-            @include decotext(right);
-        }
-    }
-
-    .reserve-btn {
-        @include btn($bg: $color-accent, $color: #fff);
-
-        &--line {
-            background-color: $color-accent;
-        }
-
-        &--hp {
-            background-color: #c88f8f;
-        }
     }
 }
 

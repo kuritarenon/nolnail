@@ -825,6 +825,76 @@ body.menu {
   }
 }
 
+.news-detail {
+  padding: 50px 20px;
+}
+.news-detail__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.news-detail__date {
+  display: block;
+  font-size: 13px;
+  color: #b79d9d;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.news-detail__title {
+  font-size: 22px;
+  color: #6a605d;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  text-align: left;
+}
+.news-detail__body {
+  font-size: 14px;
+  color: #6a605d;
+  line-height: 1.9;
+  text-align: left;
+}
+.news-detail__body p {
+  margin-bottom: 20px;
+}
+.news-detail__body strong {
+  font-weight: 600;
+}
+.news-detail__body img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 24px 0;
+}
+.news-detail__back {
+  display: inline-block;
+  margin-top: 2.5rem;
+  padding: 1rem 1.5rem;
+  color: #F9F3F3;
+  background-color: #CD9B9B;
+  border-radius: 30px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 1px solid #d9c2c2;
+  color: #b79d9d;
+  text-align: center;
+}
+.news-detail__back:hover {
+  opacity: 0.7;
+}
+.news-detail__back:hover {
+  background: #f7eeee;
+}
+@media (width >= 600px) {
+  .news-detail__title {
+    font-size: 26px;
+  }
+}
+
+.page-news .news {
+  background: transparent;
+  padding-top: 60px;
+}
+
 .gallery {
   margin: 100px 0;
 }
@@ -1243,92 +1313,6 @@ body.menu {
   background-color: #CD9B9B;
 }
 .reserve-btn--hp {
-  background-color: #c88f8f;
-}
-@media (width >= 600px) {
-  .reserve-btn {
-    line-height: 3;
-    margin-bottom: 5rem;
-  }
-  .reserve-btn__title {
-    font-size: 1.125rem;
-    margin: 2rem 0;
-    position: relative;
-  }
-  .reserve-btn__title::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #d8c4c4;
-    margin-top: 1.5625rem;
-  }
-  .reserve-btn__point {
-    text-align: center;
-  }
-  .reserve-btn__text {
-    margin-bottom: 1.25rem;
-  }
-  .reserve-btn__lead {
-    line-height: 1.9;
-    margin-bottom: 1.5rem;
-    color: #CD9B9B;
-    font-weight: bold;
-  }
-  .reserve-btn__list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.25rem;
-  }
-  .reserve-btn__item {
-    margin-bottom: 0.75rem;
-  }
-  .reserve-btn__note {
-    margin-top: 1.25rem;
-    line-height: 1.8;
-    color: #CD9B9B;
-    font-weight: bold;
-  }
-  .reserve-btn__btns {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1.25rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .reserve-btn__decotext::before {
-    content: "Nol nail";
-    display: block;
-    font-family: "Pacifico", serif;
-    font-size: 4.375rem;
-    opacity: 0.5;
-    text-align: right;
-    margin: 5rem 0;
-    color: #CD9B9B;
-    letter-spacing: 0.04em;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-}
-.reserve-btn .reserve-btn {
-  display: inline-block;
-  margin-top: 2.5rem;
-  padding: 1rem 1.5rem;
-  color: #fff;
-  background-color: #CD9B9B;
-  border-radius: 30px;
-  font-size: 0.875rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.reserve-btn .reserve-btn:hover {
-  opacity: 0.7;
-}
-.reserve-btn .reserve-btn--line {
-  background-color: #CD9B9B;
-}
-.reserve-btn .reserve-btn--hp {
   background-color: #c88f8f;
 }
 
