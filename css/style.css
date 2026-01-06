@@ -799,17 +799,19 @@ body.menu {
   margin: 0;
 }
 .news__item {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
   padding: 16px 0;
-  color: #6a605d;
-  font-size: 14px;
 }
 .news__item + .news__item {
   border-top: 1px solid #f0e6e6;
+}
+.news__link {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+  color: #6a605d;
+  font-size: 14px;
 }
 .news__date {
   text-align: left;
