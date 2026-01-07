@@ -1,13 +1,13 @@
 # nolnail — 進級制作の Web サイト
 
-kuritarenon/nolnail は、進級制作として制作された Web サイトのソースコードです。  
+kuritarenon/nolnail は、進級制作として制作された Web サイトのソースコードです。
 HTML / CSS / JavaScript を使用した静的 Web サイトです。
 
 ---
 
 ## 📌 プロジェクト概要
 
-本プロジェクトは、ネイルサロンを想定した Web サイト制作を通して、  
+本プロジェクトは、実際のネイルサロン「Nol」さんの Web サイト制作を通して、
 デザイン設計・コーディング・レスポンシブ対応などのスキルを学ぶことを目的としています。
 
 ---
@@ -31,26 +31,6 @@ nolnail/
 
 ---
 
-## 🚀 使用方法
-
-### ローカルでの確認方法
-
-1. リポジトリをクローン
-```bash
-git clone https://github.com/kuritarenon/nolnail.git
-```
-
-2. ブラウザで `index.html` を開く  
-もしくは簡易サーバを起動：
-
-```bash
-python3 -m http.server 8000
-```
-
-ブラウザで `http://localhost:8000` にアクセスしてください。
-
----
-
 ## 🛠 使用技術
 
 - HTML
@@ -61,7 +41,7 @@ python3 -m http.server 8000
 
 ## 📄 ライセンス
 
-このプロジェクトは MIT ライセンスのもとで公開されています。  
+このプロジェクトは MIT ライセンスのもとで公開されています。
 詳細は `LICENSE` ファイルをご確認ください。
 
 ---
