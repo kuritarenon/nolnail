@@ -296,7 +296,7 @@ img {
         height: 100vh;
         background: $color-main;
         padding: 80px 24px;
-        z-index: 1000;
+        z-index: 5000;
 
         opacity: 0;
         visibility: hidden;
@@ -1204,6 +1204,8 @@ main section.is-show * {
    MENUページ
 ============================================================== */
 .menu {
+    margin-bottom: 0;
+
     &-page {
         padding: 100px 0;
 
@@ -1282,7 +1284,7 @@ main section.is-show * {
         backdrop-filter: blur(6px);
         padding: 16px;
         border-radius: 8px;
-        z-index: 1000;
+        z-index: 500;
     }
 
     &-sidebar__list {

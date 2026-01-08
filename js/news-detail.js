@@ -33,7 +33,6 @@ function renderNews(data) {
     document.getElementById('newsTitle').textContent = data.title;
     document.getElementById('newsBody').innerHTML = data.content;
 
-    // 描画後に fade-in 初期化
     initFadeIn();
 }
 

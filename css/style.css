@@ -146,7 +146,7 @@ img {
   height: 100vh;
   background: #F9F3F3;
   padding: 80px 24px;
-  z-index: 1000;
+  z-index: 5000;
   opacity: 0;
   visibility: hidden;
   transform: translateX(30px);
@@ -974,6 +974,9 @@ main section.is-show * {
 /* ==============================================================
    MENUページ
 ============================================================== */
+.menu {
+  margin-bottom: 0;
+}
 .menu-page {
   padding: 100px 0;
 }
@@ -1067,7 +1070,7 @@ main section.is-show * {
           backdrop-filter: blur(6px);
   padding: 16px;
   border-radius: 8px;
-  z-index: 1000;
+  z-index: 500;
 }
 .menu-sidebar__list {
   list-style: none;
