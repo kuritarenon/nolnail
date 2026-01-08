@@ -265,7 +265,7 @@ img {
 .header {
     position: fixed;
     width: 100%;
-    z-index: 3000;
+    z-index: 10;
     padding: 16px 24px;
     background: $color-base;
 
@@ -290,14 +290,22 @@ img {
 
     &__nav {
         position: fixed;
-        top: 80px;
-        right: -100%;
-        width: 20%;
+        top: 0;
+        right: 0;
+        width: 40%;
         height: 100vh;
         background: $color-main;
         padding: 80px 24px;
-        transition: right 0.3s ease;
-        z-index: 2000;
+        z-index: 1000;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(30px);
+
+        transition:
+            opacity 0.5s ease,
+            transform 0.5s ease,
+            visibility 0.5s ease;
     }
 
     &__nav-list {
@@ -314,6 +322,12 @@ img {
 
     &__nav--open {
         right: 0;
+    }
+
+    &__nav--open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
     }
 
     &__hamburger {
@@ -345,7 +359,7 @@ img {
         background: none;
         border: none;
         cursor: pointer;
-        color: #333;
+        color: $color-accent;
         z-index: 9999;
     }
 
@@ -354,6 +368,10 @@ img {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        &__nav {
+            width: 20%;
+        }
     }
 }
 

@@ -19,24 +19,38 @@ function initHamburger() {
     const closeBtn = nav.querySelector('.header__close');
     const navLinks = nav.querySelectorAll('.header__nav-link');
 
+    // ハンバーガー開閉
     hamburger.addEventListener('click', () => {
         const isOpen = nav.classList.toggle('header__nav--open');
+        hamburger.classList.toggle('is-open', isOpen);
         hamburger.setAttribute('aria-expanded', isOpen);
     });
 
+    // ×ボタンで閉じる
     closeBtn?.addEventListener('click', () => {
-        nav.classList.remove('header__nav--open');
-        hamburger.setAttribute('aria-expanded', false);
+        closeMenu();
     });
 
+    // ナビリンククリックで閉じる
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('header__nav--open');
-            hamburger.setAttribute('aria-expanded', false);
+            closeMenu();
         });
     });
-}
 
+    // ナビ背景クリックで閉じる
+    nav.addEventListener('click', (e) => {
+        if (e.target === nav) {
+            closeMenu();
+        }
+    });
+
+    function closeMenu() {
+        nav.classList.remove('header__nav--open');
+        hamburger.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', false);
+    }
+}
 // ===============================
 // サイドバー制御
 // ===============================
