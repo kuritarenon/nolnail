@@ -1319,11 +1319,11 @@ main section.is-show * {
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0);
+        z-index: 1;
     }
 
     &-sidebar.is-end {
         position: absolute;
-        /* footer手前で固定 */
         bottom: 40px;
         top: auto;
         transform: none;
