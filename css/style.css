@@ -142,7 +142,7 @@ img {
   position: fixed;
   top: 0;
   right: 0;
-  width: 40%;
+  width: 100%;
   height: 100vh;
   background: #F9F3F3;
   padding: 80px 24px;
@@ -164,8 +164,6 @@ img {
 }
 .header__nav--open {
   right: 0;
-}
-.header__nav--open {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -438,7 +436,7 @@ main section.is-show * {
 .mv__title {
   position: absolute;
   width: 100%;
-  font-size: 80px;
+  font-size: 90px;
   font-family: "Yu Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: transparent;
   -webkit-text-stroke: 2px #CD9B9B;
